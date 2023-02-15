@@ -4,16 +4,17 @@ import React, { useEffect, useState } from 'react'
 // CSS
 import styles from './Header.module.css'
 import Chat from '../Chat/Chat'
-import logo from '../../assets/img/pxArt.png'
+import logo from '../../assets/img/MPTIlogo.png'
 import { Navigate } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux'
 import { chatToggle, etcActions } from '../../store/etc'
-import { authActions } from '../../store/auth'
 //ClientHeader
 export default function ClientHeader(){
 	const dispatch = useDispatch();
-	const {roleToken} = useSelector((state) => state.auth)
+	const [roleToken, setRoleToken]=useState(
+		localStorage.getItem("mpti_role")
+	);
 	const navigate= useNavigate();
 
 	// 채팅 온
@@ -45,8 +46,6 @@ export default function ClientHeader(){
 	}
 
 	const logout = () => {
-		dispatch(authActions.logout())
-		sessionStorage.clear()
 		localStorage.clear()
 		navigate("/login")
 		console.log('로그아웃')
@@ -60,7 +59,7 @@ export default function ClientHeader(){
 			{ chatOn && <Chat />}
 			{/* home 이동버튼 */}
 			<div className={styles.head_logo}> <Link to={'home'} onClick={()=>{setMenuSelect('home')}}>
-			<img src='/background.png'/></Link>	</div>
+			<img src={logo} style={{width: "150px", height: "45px",marginBottom:15,marginTop:-4.5}}/></Link></div>
 			
 
 			{/* head menu담는 박스 */}
