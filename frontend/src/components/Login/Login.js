@@ -5,13 +5,17 @@ import kakao from "../../assets/img/login_kakao.png";
 import naver from "../../assets/img/login_naver.png";
 import google from "../../assets/img/login_google.png";
 import { useNavigate } from 'react-router-dom';
-import { authActions, login }  from '../../store/auth';
+import { login }  from '../../store/auth';
+import logo from '../../assets/img/MPTIlogo.png'
 
 const Login = () => {
 const dispatch = useDispatch();
 const navigate=useNavigate();
 const { role, isLoggedIn} = useSelector((state) => state.auth);
-const {roleToken} = useSelector(state=>state.auth)
+const [roleToken, setRoleToken] = useState(
+    localStorage.getItem("mpti_role")
+);
+
 const [userInfo, setUserInfo] = useState({
     email: "",
     isEmail: undefined,
@@ -26,11 +30,13 @@ console.log("로그인상태", isLoggedIn);
 
 useEffect(()=>{
     if(roleToken === null){
+        setRoleToken(localStorage.getItem("mpti_role"))
     }else{
         navigate(`/${roleToken}/home`);
         // navigate(`/client/home`);
     }
-},[roleToken]) 
+
+},[roleToken,isLoggedIn ]) 
 
 const userInfoHandler= (e)=>{
     switch(e.target.name){
@@ -58,7 +64,7 @@ const onSubmitHandler = (e)=>{
 return (
     <div className={styles.Login}> 
     <div className={styles.header_box}>
-                <div className={styles.header}>MPTI</div>
+            <div className={styles.header}><img src={logo}/></div>
             </div>
             
         <form onSubmit={onSubmitHandler}>
