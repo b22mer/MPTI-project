@@ -1,6 +1,6 @@
 # MPTI
 
-###Frontend
+### Frontend
 
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 
@@ -154,7 +154,7 @@ MPTI는 운동 관련 대면 서비스를 비대면 서비스화 하여 고객�
 >
 >![social](https://user-images.githubusercontent.com/73810834/219534679-71a06fdf-a80e-4231-9250-28c200f02d08.gif)
 >
->**카카오 페이 결제 **
+>**카카오 페이 결제**
 >
 >사용자는 기존에 사용하던 결제 수단인 카카오 페이를 통해 손쉽게 결제할 수 있습니다.
 >
