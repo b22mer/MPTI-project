@@ -173,17 +173,6 @@ MPTI는 운동 관련 대면 서비스를 비대면 서비스화 하여 고객�
 |  Frontend   |  [서유진](https://github.com/yxxddii)   |   [정원철](https://github.com/b22mer)    | [윤동근](https://github.com/YoonDongGeun/YoonDongGeun) |
 | :---------: | :-------------------------------------: | :--------------------------------------: | ------------------------------------------------------ |
 | **Backend** | **[지선호](https://github.com/hoya54)** | **[이예은](https://github.com/Dodamon)** | **[안려환](https://github.com/Ryeohwan)**              |
-|     VIP     |                 박종철                  |                  오윤택                  | 윤성도                                                 |
-
-### License
-
- Copyright © SSAFY 8기 A803 서유진 안려환 윤동근 이예은 정원철 지선호 All Rights Reservd
-
-Copyright © SAMSUNG All Rights Reserved.
-
-
-
-
 
 
 
